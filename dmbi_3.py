@@ -3,9 +3,9 @@
 ##################################
 import numpy as np   
 
-bill = np.array([34,108,64,88,99,51])
+bill = np.array([41,98,25,85,50,73])
 
-tip = np.array([5,17,11,8,14,5])
+tip = np.array([8,17,4,12,5,14])
 
 bill_mean = np.mean(bill)
 tip_mean = np.mean(tip)
@@ -20,14 +20,14 @@ for a in np.nditer(bill):
 for b in np.nditer(tip):
 	tip_diff.append(b-tip_mean)
 
-print(bill_mean)
-print(tip_mean)
-print(bill_diff)
-print(tip_diff)
+print("bill_mean",bill_mean)
+print("tip_mean",tip_mean)
+print("bill_diff",bill_diff)
+print("tip_diff",tip_diff)
 
 both_diff = np.multiply(bill_diff, tip_diff)
-print(both_diff)
-print(np.sum(both_diff))
+print("both_diff",both_diff)
+# print(np.sum(both_diff))
 
 b1 = np.sum(both_diff) / np.sum(np.multiply(bill_diff,bill_diff))
 b1 = round(b1,4)
